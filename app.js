@@ -43,6 +43,8 @@ let checkInputs = () => {
         setErrorFor(userName, "can't be empty......");
         userName.focus();
 
+    }else if(userNameValue.length< 4) {
+        setErrorFor(userName, "must be more thant 4 characters.....");
     }else if(+userNameValue ){
         setErrorFor(userName, "can't be numbers only......");
         userName.focus();

@@ -37,14 +37,14 @@ let checkInputs = () => {
     const passwordValue = password.value.trim();
     const passwodCheckValue = passwodCheck.value.trim();
     // validating username 
-    if(userNameValue === '') {
+    if(userNameValue === '' || userNameValue === null) {
         // show error
         // add error class
         setErrorFor(userName, "can't be empty......");
         userName.focus();
 
-    }else if(userNameValue.length < 5) {
-        setErrorFor(userName, "must be more thant 5 characters.....");
+    }else if(userNameValue.length < 6) {
+        setErrorFor(userName, "must be more than 6 characters.....");
     }else if(+userNameValue ){
         setErrorFor(userName, "can't be numbers only......");
         userName.focus();
